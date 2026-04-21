@@ -161,7 +161,7 @@
                 </a>
             </div>
             <!-- Mobile menu button -->
-            <button id="mobile-menu-btn"
+            <button id="mobile-menu-btn" type="button"
                 class="lg:hidden flex flex-col gap-1.5 focus:outline-none p-2 relative z-50 mt-1">
                 <span class="w-6 h-0.5 bg-stone-900 dark:bg-stone-50 transition-all duration-300 block"></span>
                 <span class="w-6 h-0.5 bg-stone-900 dark:bg-stone-50 transition-all duration-300 block"></span>
@@ -706,75 +706,78 @@ transition: all 0.5s ease;
         const box = document.getElementById("successMessage");
         const submitBtn = document.getElementById("submit-button");
 
-        form.addEventListener("submit", async function (e) {
-            e.preventDefault();
+        if (form) {
+            form.addEventListener("submit", async function (e) {
+                e.preventDefault();
 
-            const formData = new FormData(form);
-            const object = Object.fromEntries(formData);
+                const formData = new FormData(form);
+                const object = Object.fromEntries(formData);
 
-            // ===== CLIENT-SIDE VALIDATION =====
-            const nameField = object.name ? object.name.trim() : "";
-            const emailField = object.email ? object.email.trim() : "";
-            const phoneField = object.phone ? object.phone.trim() : "";
-            const messageField = object.message ? object.message.trim() : "";
+                // ===== CLIENT-SIDE VALIDATION =====
+                const nameField = object.name ? object.name.trim() : "";
+                const emailField = object.email ? object.email.trim() : "";
+                const phoneField = object.phone ? object.phone.trim() : "";
+                const messageField = object.message ? object.message.trim() : "";
 
-            if (nameField.length < 2) {
-                show("❌ Name is required (minimum 2 characters)!", "red");
-                return;
-            }
-
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(emailField)) {
-                show("❌ Valid Email address required!", "red");
-                return;
-            }
-
-            const phoneRegex = /^[0-9]{10}$/;
-            if (!phoneRegex.test(phoneField)) {
-                show("❌ Valid 10-digit Contact Number required!", "red");
-                return;
-            }
-
-            if (messageField.length < 5) {
-                show("❌ Project brief is required (minimum 5 characters)!", "red");
-                return;
-            }
-
-            const json = JSON.stringify(object);
-
-            submitBtn.innerHTML = 'Sending...';
-            submitBtn.disabled = true;
-
-            try {
-                const res = await fetch("https://api.web3forms.com/submit", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                        "Accept": "application/json"
-                    },
-                    body: json
-                });
-
-                let result = await res.json();
-
-                if (res.status == 200) {
-                    show("Email Sent Successfully ✅);
-                    form.reset();
-                } else {
-                    console.log(result);
-                    show("Error ❌: " + result.message, "red");
+                if (nameField.length < 2) {
+                    show("❌ Name is required (minimum 2 characters)!", "red");
+                    return;
                 }
 
-            } catch (err) {
-                console.log(err);
-                show("Error ❌: Kuch galat ho gaya.", "red");
-            } finally {
-                submitBtn.innerHTML = 'Initialize Inquiry';
-                submitBtn.disabled = false;
-            }
-        });
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(emailField)) {
+                    show("❌ Valid Email address required!", "red");
+                    return;
+                }
+
+                const phoneRegex = /^[0-9]{10}$/;
+                if (!phoneRegex.test(phoneField)) {
+                    show("❌ Valid 10-digit Contact Number required!", "red");
+                    return;
+                }
+
+                if (messageField.length < 5) {
+                    show("❌ Project brief is required (minimum 5 characters)!", "red");
+                    return;
+                }
+
+                const json = JSON.stringify(object);
+
+                submitBtn.innerHTML = 'Sending...';
+                submitBtn.disabled = true;
+
+                try {
+                    const res = await fetch("https://api.web3forms.com/submit", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                            "Accept": "application/json"
+                        },
+                        body: json
+                    });
+
+                    let result = await res.json();
+
+                    if (res.status == 200) {
+                        show("Email Sent Successfully ✅\n\nAapka message aapke Gmail par bhej diya gaya hai!", "#705835");
+                        form.reset();
+                    } else {
+                        console.log(result);
+                        show("Error ❌: " + result.message, "red");
+                    }
+
+                } catch (err) {
+                    console.log(err);
+                    show("Error ❌: Kuch galat ho gaya.", "red");
+                } finally {
+                    submitBtn.innerHTML = 'Initialize Inquiry';
+                    submitBtn.disabled = false;
+                }
+            });
+        }
 
         function show(msg, color) {
+            if (!box) return;
             box.innerText = msg;
             box.style.background = color;
             box.style.display = "block";
@@ -791,8 +794,17 @@ transition: all 0.5s ease;
 
         if (mobileMenuBtn && mobileMenu) {
             mobileMenuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('translate-x-full');
-                document.body.classList.toggle('overflow-hidden');
+                const isOpen = mobileMenu.classList.contains('translate-x-0');
+                
+                if (isOpen) {
+                    mobileMenu.classList.remove('translate-x-0');
+                    mobileMenu.classList.add('translate-x-full');
+                    document.body.classList.remove('overflow-hidden');
+                } else {
+                    mobileMenu.classList.remove('translate-x-full');
+                    mobileMenu.classList.add('translate-x-0');
+                    document.body.classList.add('overflow-hidden');
+                }
 
                 if (spans && spans.length >= 3) {
                     spans[0].classList.toggle('rotate-45');
@@ -805,6 +817,7 @@ transition: all 0.5s ease;
 
             mobileLinks.forEach(link => {
                 link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('translate-x-0');
                     mobileMenu.classList.add('translate-x-full');
                     document.body.classList.remove('overflow-hidden');
 
