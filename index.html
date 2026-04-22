@@ -101,7 +101,7 @@
             }
 
             100% {
-                transform: translateX(-50%);
+                transform: translateX(-100%);
             }
         }
 
@@ -109,7 +109,7 @@
             animation: scroll 40s linear infinite;
         }
 
-        .animate-scroll:hover {
+        .scroll-wrapper:hover .animate-scroll {
             animation-play-state: paused;
         }
     </style>
@@ -223,141 +223,153 @@
                     Showcase</h2>
                 <div class="w-16 h-1 bg-primary mx-auto"></div>
             </div>
-            <div class="relative flex">
-                <div class="flex gap-6 animate-scroll whitespace-nowrap px-6">
+            <div class="relative flex scroll-wrapper">
+                <div class="flex gap-6 animate-scroll pr-6 w-max">
                     <!-- Slide 1 -->
-                    <div
-                        class="relative flex-shrink-0 w-[280px] sm:w-[320px] md:w-[450px] aspect-[4/5] bg-stone-200 overflow-hidden group">
-                        <img alt="Premium Bronze Handle"
-                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmkFAxlF-EKLA71DOSYdG2GemBSbi5n7z6uTKr9zab3vr1L0-QN4L4n7l0EnRuwTo-sKBdcx_ilhV9LScp0TJIdT0jN5UuUVh6Ev_kPoG42dcYb8XXW48hJ_nd-J6BMJYyUTCs-_22BeAtjPge6mgVSox8f979aMISkg996cwYYWbiCIWtfVhO5RVFbw1uIgq0_hsoi6PejOemeCcPU9IXdzG_t5r9vvzeeVAsa6ymvG7OGkHoKguJtO3id0J375jE5x3YRnLTNPw" />
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
-                            <p class="font-headline font-bold text-2xl text-white uppercase tracking-tighter">The
-                                Knurled Bronze</p>
-                            <p class="font-label text-xs text-stone-300 uppercase tracking-widest mt-2">Industrial
-                                Series 01</p>
+                    <div class="relative flex-shrink-0 w-[280px] sm:w-[320px] md:w-[450px] aspect-[4/5] bg-stone-200 overflow-hidden group">
+                        <img alt="Premium Bronze Handle" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmkFAxlF-EKLA71DOSYdG2GemBSbi5n7z6uTKr9zab3vr1L0-QN4L4n7l0EnRuwTo-sKBdcx_ilhV9LScp0TJIdT0jN5UuUVh6Ev_kPoG42dcYb8XXW48hJ_nd-J6BMJYyUTCs-_22BeAtjPge6mgVSox8f979aMISkg996cwYYWbiCIWtfVhO5RVFbw1uIgq0_hsoi6PejOemeCcPU9IXdzG_t5r9vvzeeVAsa6ymvG7OGkHoKguJtO3id0J375jE5x3YRnLTNPw" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                            <p class="font-headline font-bold text-2xl text-white uppercase tracking-tighter">The Knurled Bronze</p>
+                            <p class="font-label text-xs text-stone-300 uppercase tracking-widest mt-2">Industrial Series 01</p>
                         </div>
                     </div>
                     <!-- Slide 2 -->
-                    <div
-                        class="relative flex-shrink-0 w-[280px] sm:w-[320px] md:w-[450px] aspect-[4/5] bg-stone-200 overflow-hidden group">
-                        <img alt="Structural Hinge"
-                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDN2HNbPnoWx4iRs2UUP-eR1MA7AcmLAjq05eczupIXnoEABrAWM8uGskdNGh77249Kd6AHeD-Wm0TCfCF3OYXbYkeQh5itZE6-IwPTZOjP4N5Souhh_s634eB0ICHqctfkE3T8RAI01TiMzflYfmh6Ne6ceuJyP6qYNcBVT_tdxeSU2c0mdXDEQHlb9yMAz9G68WkbiqJ_B2fDJzzsuZ_2WLTtTEn6NytFpQhM9g4adkGs316G1vC81S744mmqFAZxnFiu3C5ZCfg" />
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
-                            <p class="font-headline font-bold text-2xl text-white uppercase tracking-tighter">Gravity
-                                Pivots</p>
-                            <p class="font-label text-xs text-stone-300 uppercase tracking-widest mt-2">Structural
-                                Performance</p>
+                    <div class="relative flex-shrink-0 w-[280px] sm:w-[320px] md:w-[450px] aspect-[4/5] bg-stone-200 overflow-hidden group">
+                        <img alt="Structural Hinge" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDN2HNbPnoWx4iRs2UUP-eR1MA7AcmLAjq05eczupIXnoEABrAWM8uGskdNGh77249Kd6AHeD-Wm0TCfCF3OYXbYkeQh5itZE6-IwPTZOjP4N5Souhh_s634eB0ICHqctfkE3T8RAI01TiMzflYfmh6Ne6ceuJyP6qYNcBVT_tdxeSU2c0mdXDEQHlb9yMAz9G68WkbiqJ_B2fDJzzsuZ_2WLTtTEn6NytFpQhM9g4adkGs316G1vC81S744mmqFAZxnFiu3C5ZCfg" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                            <p class="font-headline font-bold text-2xl text-white uppercase tracking-tighter">Gravity Pivots</p>
+                            <p class="font-label text-xs text-stone-300 uppercase tracking-widest mt-2">Structural Performance</p>
                         </div>
                     </div>
                     <!-- Slide 3 -->
-                    <div
-                        class="relative flex-shrink-0 w-[280px] sm:w-[320px] md:w-[450px] aspect-[4/5] bg-stone-200 overflow-hidden group">
-                        <img alt="Brass Pulls"
-                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYSZgzqGOzNPHKvqzMqzsbjDXB2kyeMYWMUCPnqwHbTeAFDEIQBNokeHhfth6hV03zdHqjUN6NOhtJ5Pu8bvN42D2PU3ZE07Ul_KF8gMjHvPfRi163D46nCDJZnbs_THJDjjqRtw-HzacbxYF3zOfCGE1Zd932vNTyUTFS7zUU1FaBPHKkqkqpgmewwIHj5ulDgUT0z-bZx5fLvX62CDVTAqrGVi11X-eEjw0GFtIiwa0nothRyxUKNXoojnf6AgeSCxa9Fw8eqvw" />
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
-                            <p class="font-headline font-bold text-2xl text-white uppercase tracking-tighter">Satin Bar
-                                Pulls</p>
-                            <p class="font-label text-xs text-stone-300 uppercase tracking-widest mt-2">Minimalist
-                                Luxury</p>
+                    <div class="relative flex-shrink-0 w-[280px] sm:w-[320px] md:w-[450px] aspect-[4/5] bg-stone-200 overflow-hidden group">
+                        <img alt="Brass Pulls" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYSZgzqGOzNPHKvqzMqzsbjDXB2kyeMYWMUCPnqwHbTeAFDEIQBNokeHhfth6hV03zdHqjUN6NOhtJ5Pu8bvN42D2PU3ZE07Ul_KF8gMjHvPfRi163D46nCDJZnbs_THJDjjqRtw-HzacbxYF3zOfCGE1Zd932vNTyUTFS7zUU1FaBPHKkqkqpgmewwIHj5ulDgUT0z-bZx5fLvX62CDVTAqrGVi11X-eEjw0GFtIiwa0nothRyxUKNXoojnf6AgeSCxa9Fw8eqvw" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                            <p class="font-headline font-bold text-2xl text-white uppercase tracking-tighter">Satin Bar Pulls</p>
+                            <p class="font-label text-xs text-stone-300 uppercase tracking-widest mt-2">Minimalist Luxury</p>
                         </div>
                     </div>
-                    <!-- Repeat for Loop -->
-                    <div
-                        class="relative flex-shrink-0 w-[280px] sm:w-[320px] md:w-[450px] aspect-[4/5] bg-stone-200 overflow-hidden group">
-                        <img alt="Matte Black Lever"
-                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSDexdTcBph2QP0cqD0UuOks1eAHWTpZlbyBCmiwVLmqjgsXMm3S_oLaJSVa50b_7OtsheHv5ZeOCRvF_gBmK97Y8dZnzI43dcEZIs69bm_G3ATdYe_VRVZhAJhEGoOUeR7UNlndbMN4nF6wTXTFA9j5K_yfRoMbVBu_YQIev2Yn-7QbuyUvAqvrxG936YCMTfUrtIjepCW6tCQGiY834GZs6pYeQucuTEdizJG1NkEaxFgdJtfvIfkFaLOKnfTkxGqOWfekvEVrU" />
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
-                            <p class="font-headline font-bold text-2xl text-white uppercase tracking-tighter">Monolith
-                                Matte</p>
-                            <p class="font-label text-xs text-stone-300 uppercase tracking-widest mt-2">Atelier Series
-                            </p>
+                    <!-- Slide 4 -->
+                    <div class="relative flex-shrink-0 w-[280px] sm:w-[320px] md:w-[450px] aspect-[4/5] bg-stone-200 overflow-hidden group">
+                        <img alt="Matte Black Lever" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSDexdTcBph2QP0cqD0UuOks1eAHWTpZlbyBCmiwVLmqjgsXMm3S_oLaJSVa50b_7OtsheHv5ZeOCRvF_gBmK97Y8dZnzI43dcEZIs69bm_G3ATdYe_VRVZhAJhEGoOUeR7UNlndbMN4nF6wTXTFA9j5K_yfRoMbVBu_YQIev2Yn-7QbuyUvAqvrxG936YCMTfUrtIjepCW6tCQGiY834GZs6pYeQucuTEdizJG1NkEaxFgdJtfvIfkFaLOKnfTkxGqOWfekvEVrU" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                            <p class="font-headline font-bold text-2xl text-white uppercase tracking-tighter">Monolith Matte</p>
+                            <p class="font-label text-xs text-stone-300 uppercase tracking-widest mt-2">Atelier Series</p>
                         </div>
                     </div>
-                    <!-- Slide 5 (Kitchen Wire Baskets) -->
-                    <div
-                        class="relative flex-shrink-0 w-[280px] sm:w-[320px] md:w-[450px] aspect-[4/5] bg-stone-200 overflow-hidden group">
-                        <img alt="Xoro Kitchen Wire Baskets"
-                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-                            src="p1.png" />
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                    <!-- Slide 5 -->
+                    <div class="relative flex-shrink-0 w-[280px] sm:w-[320px] md:w-[450px] aspect-[4/5] bg-stone-200 overflow-hidden group">
+                        <img alt="Xoro Kitchen Wire Baskets" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="p1.png" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
                             <p class="font-headline font-bold text-2xl text-white uppercase tracking-tighter">Kitchen Organizers</p>
                             <p class="font-label text-xs text-stone-300 uppercase tracking-widest mt-2">Xoro Series</p>
                         </div>
                     </div>
-                    <!-- Slide 6 (Red Copper Fittings) -->
-                    <div
-                        class="relative flex-shrink-0 w-[280px] sm:w-[320px] md:w-[450px] aspect-[4/5] bg-stone-200 overflow-hidden group">
-                        <img alt="Red Copper Hardware Fittings"
-                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-                            src="p2.png" />
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                    <!-- Slide 6 -->
+                    <div class="relative flex-shrink-0 w-[280px] sm:w-[320px] md:w-[450px] aspect-[4/5] bg-stone-200 overflow-hidden group">
+                        <img alt="Red Copper Hardware Fittings" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="p2.png" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
                             <p class="font-headline font-bold text-2xl text-white uppercase tracking-tighter">Exclusive Fittings</p>
                             <p class="font-label text-xs text-stone-300 uppercase tracking-widest mt-2">Red Copper Collection</p>
                         </div>
                     </div>
-                    <!-- Slide 7 (Matte Black Pulls) -->
-                    <div
-                        class="relative flex-shrink-0 w-[280px] sm:w-[320px] md:w-[450px] aspect-[4/5] bg-stone-200 overflow-hidden group">
-                        <img alt="Modern Black Drawer Pulls"
-                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-                            src="p3.png" />
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                    <!-- Slide 7 -->
+                    <div class="relative flex-shrink-0 w-[280px] sm:w-[320px] md:w-[450px] aspect-[4/5] bg-stone-200 overflow-hidden group">
+                        <img alt="Modern Black Drawer Pulls" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="p3.png" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
                             <p class="font-headline font-bold text-2xl text-white uppercase tracking-tighter">Matte Black Pulls</p>
                             <p class="font-label text-xs text-stone-300 uppercase tracking-widest mt-2">Modern Kitchen</p>
                         </div>
                     </div>
-                    <!-- Slide 8 (Cylindrical Handle) -->
-                    <div
-                        class="relative flex-shrink-0 w-[280px] sm:w-[320px] md:w-[450px] aspect-[4/5] bg-stone-200 overflow-hidden group">
-                        <img alt="Cylindrical Door Handle"
-                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-                            src="p4.png" />
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                    <!-- Slide 8 -->
+                    <div class="relative flex-shrink-0 w-[280px] sm:w-[320px] md:w-[450px] aspect-[4/5] bg-stone-200 overflow-hidden group">
+                        <img alt="Cylindrical Door Handle" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="p4.png" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
                             <p class="font-headline font-bold text-2xl text-white uppercase tracking-tighter">Cylindrical Lever</p>
                             <p class="font-label text-xs text-stone-300 uppercase tracking-widest mt-2">Premium Series</p>
                         </div>
                     </div>
-                    <!-- Slide 9 (Godrej Lock) -->
-                    <div
-                        class="relative flex-shrink-0 w-[280px] sm:w-[320px] md:w-[450px] aspect-[4/5] bg-stone-200 overflow-hidden group">
-                        <img alt="Godrej Advantis Revolution Smart Lock"
-                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-                            src="p5.png" />
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                    <!-- Slide 9 -->
+                    <div class="relative flex-shrink-0 w-[280px] sm:w-[320px] md:w-[450px] aspect-[4/5] bg-stone-200 overflow-hidden group">
+                        <img alt="Godrej Advantis Revolution Smart Lock" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="p5.png" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
                             <p class="font-headline font-bold text-2xl text-white uppercase tracking-tighter">Advantis Revolution</p>
                             <p class="font-label text-xs text-stone-300 uppercase tracking-widest mt-2">Godrej Smart Locks</p>
                         </div>
                     </div>
-                    <!-- Duplicate Set for continuous loop -->
-                    <div
-                        class="relative flex-shrink-0 w-[280px] sm:w-[320px] md:w-[450px] aspect-[4/5] bg-stone-200 overflow-hidden group">
-                        <img alt="Premium Bronze Handle"
-                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmkFAxlF-EKLA71DOSYdG2GemBSbi5n7z6uTKr9zab3vr1L0-QN4L4n7l0EnRuwTo-sKBdcx_ilhV9LScp0TJIdT0jN5UuUVh6Ev_kPoG42dcYb8XXW48hJ_nd-J6BMJYyUTCs-_22BeAtjPge6mgVSox8f979aMISkg996cwYYWbiCIWtfVhO5RVFbw1uIgq0_hsoi6PejOemeCcPU9IXdzG_t5r9vvzeeVAsa6ymvG7OGkHoKguJtO3id0J375jE5x3YRnLTNPw" />
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
-                            <p class="font-headline font-bold text-2xl text-white uppercase tracking-tighter">The
-                                Knurled Bronze</p>
+                </div>
+                <div class="flex gap-6 animate-scroll pr-6 w-max" aria-hidden="true">
+                    <!-- Slide 1 -->
+                    <div class="relative flex-shrink-0 w-[280px] sm:w-[320px] md:w-[450px] aspect-[4/5] bg-stone-200 overflow-hidden group">
+                        <img alt="Premium Bronze Handle" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmkFAxlF-EKLA71DOSYdG2GemBSbi5n7z6uTKr9zab3vr1L0-QN4L4n7l0EnRuwTo-sKBdcx_ilhV9LScp0TJIdT0jN5UuUVh6Ev_kPoG42dcYb8XXW48hJ_nd-J6BMJYyUTCs-_22BeAtjPge6mgVSox8f979aMISkg996cwYYWbiCIWtfVhO5RVFbw1uIgq0_hsoi6PejOemeCcPU9IXdzG_t5r9vvzeeVAsa6ymvG7OGkHoKguJtO3id0J375jE5x3YRnLTNPw" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                            <p class="font-headline font-bold text-2xl text-white uppercase tracking-tighter">The Knurled Bronze</p>
+                            <p class="font-label text-xs text-stone-300 uppercase tracking-widest mt-2">Industrial Series 01</p>
                         </div>
                     </div>
-                    <div
-                        class="relative flex-shrink-0 w-[280px] sm:w-[320px] md:w-[450px] aspect-[4/5] bg-stone-200 overflow-hidden group">
-                        <img alt="Structural Hinge"
-                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDN2HNbPnoWx4iRs2UUP-eR1MA7AcmLAjq05eczupIXnoEABrAWM8uGskdNGh77249Kd6AHeD-Wm0TCfCF3OYXbYkeQh5itZE6-IwPTZOjP4N5Souhh_s634eB0ICHqctfkE3T8RAI01TiMzflYfmh6Ne6ceuJyP6qYNcBVT_tdxeSU2c0mdXDEQHlb9yMAz9G68WkbiqJ_B2fDJzzsuZ_2WLTtTEn6NytFpQhM9g4adkGs316G1vC81S744mmqFAZxnFiu3C5ZCfg" />
+                    <!-- Slide 2 -->
+                    <div class="relative flex-shrink-0 w-[280px] sm:w-[320px] md:w-[450px] aspect-[4/5] bg-stone-200 overflow-hidden group">
+                        <img alt="Structural Hinge" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDN2HNbPnoWx4iRs2UUP-eR1MA7AcmLAjq05eczupIXnoEABrAWM8uGskdNGh77249Kd6AHeD-Wm0TCfCF3OYXbYkeQh5itZE6-IwPTZOjP4N5Souhh_s634eB0ICHqctfkE3T8RAI01TiMzflYfmh6Ne6ceuJyP6qYNcBVT_tdxeSU2c0mdXDEQHlb9yMAz9G68WkbiqJ_B2fDJzzsuZ_2WLTtTEn6NytFpQhM9g4adkGs316G1vC81S744mmqFAZxnFiu3C5ZCfg" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                            <p class="font-headline font-bold text-2xl text-white uppercase tracking-tighter">Gravity Pivots</p>
+                            <p class="font-label text-xs text-stone-300 uppercase tracking-widest mt-2">Structural Performance</p>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="relative flex-shrink-0 w-[280px] sm:w-[320px] md:w-[450px] aspect-[4/5] bg-stone-200 overflow-hidden group">
+                        <img alt="Brass Pulls" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYSZgzqGOzNPHKvqzMqzsbjDXB2kyeMYWMUCPnqwHbTeAFDEIQBNokeHhfth6hV03zdHqjUN6NOhtJ5Pu8bvN42D2PU3ZE07Ul_KF8gMjHvPfRi163D46nCDJZnbs_THJDjjqRtw-HzacbxYF3zOfCGE1Zd932vNTyUTFS7zUU1FaBPHKkqkqpgmewwIHj5ulDgUT0z-bZx5fLvX62CDVTAqrGVi11X-eEjw0GFtIiwa0nothRyxUKNXoojnf6AgeSCxa9Fw8eqvw" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                            <p class="font-headline font-bold text-2xl text-white uppercase tracking-tighter">Satin Bar Pulls</p>
+                            <p class="font-label text-xs text-stone-300 uppercase tracking-widest mt-2">Minimalist Luxury</p>
+                        </div>
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="relative flex-shrink-0 w-[280px] sm:w-[320px] md:w-[450px] aspect-[4/5] bg-stone-200 overflow-hidden group">
+                        <img alt="Matte Black Lever" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSDexdTcBph2QP0cqD0UuOks1eAHWTpZlbyBCmiwVLmqjgsXMm3S_oLaJSVa50b_7OtsheHv5ZeOCRvF_gBmK97Y8dZnzI43dcEZIs69bm_G3ATdYe_VRVZhAJhEGoOUeR7UNlndbMN4nF6wTXTFA9j5K_yfRoMbVBu_YQIev2Yn-7QbuyUvAqvrxG936YCMTfUrtIjepCW6tCQGiY834GZs6pYeQucuTEdizJG1NkEaxFgdJtfvIfkFaLOKnfTkxGqOWfekvEVrU" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                            <p class="font-headline font-bold text-2xl text-white uppercase tracking-tighter">Monolith Matte</p>
+                            <p class="font-label text-xs text-stone-300 uppercase tracking-widest mt-2">Atelier Series</p>
+                        </div>
+                    </div>
+                    <!-- Slide 5 -->
+                    <div class="relative flex-shrink-0 w-[280px] sm:w-[320px] md:w-[450px] aspect-[4/5] bg-stone-200 overflow-hidden group">
+                        <img alt="Xoro Kitchen Wire Baskets" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="p1.png" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                            <p class="font-headline font-bold text-2xl text-white uppercase tracking-tighter">Kitchen Organizers</p>
+                            <p class="font-label text-xs text-stone-300 uppercase tracking-widest mt-2">Xoro Series</p>
+                        </div>
+                    </div>
+                    <!-- Slide 6 -->
+                    <div class="relative flex-shrink-0 w-[280px] sm:w-[320px] md:w-[450px] aspect-[4/5] bg-stone-200 overflow-hidden group">
+                        <img alt="Red Copper Hardware Fittings" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="p2.png" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                            <p class="font-headline font-bold text-2xl text-white uppercase tracking-tighter">Exclusive Fittings</p>
+                            <p class="font-label text-xs text-stone-300 uppercase tracking-widest mt-2">Red Copper Collection</p>
+                        </div>
+                    </div>
+                    <!-- Slide 7 -->
+                    <div class="relative flex-shrink-0 w-[280px] sm:w-[320px] md:w-[450px] aspect-[4/5] bg-stone-200 overflow-hidden group">
+                        <img alt="Modern Black Drawer Pulls" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="p3.png" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                            <p class="font-headline font-bold text-2xl text-white uppercase tracking-tighter">Matte Black Pulls</p>
+                            <p class="font-label text-xs text-stone-300 uppercase tracking-widest mt-2">Modern Kitchen</p>
+                        </div>
+                    </div>
+                    <!-- Slide 8 -->
+                    <div class="relative flex-shrink-0 w-[280px] sm:w-[320px] md:w-[450px] aspect-[4/5] bg-stone-200 overflow-hidden group">
+                        <img alt="Cylindrical Door Handle" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="p4.png" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                            <p class="font-headline font-bold text-2xl text-white uppercase tracking-tighter">Cylindrical Lever</p>
+                            <p class="font-label text-xs text-stone-300 uppercase tracking-widest mt-2">Premium Series</p>
+                        </div>
+                    </div>
+                    <!-- Slide 9 -->
+                    <div class="relative flex-shrink-0 w-[280px] sm:w-[320px] md:w-[450px] aspect-[4/5] bg-stone-200 overflow-hidden group">
+                        <img alt="Godrej Advantis Revolution Smart Lock" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="p5.png" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                            <p class="font-headline font-bold text-2xl text-white uppercase tracking-tighter">Advantis Revolution</p>
+                            <p class="font-label text-xs text-stone-300 uppercase tracking-widest mt-2">Godrej Smart Locks</p>
+                        </div>
                     </div>
                 </div>
             </div>
