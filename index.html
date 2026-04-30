@@ -771,11 +771,11 @@ transition: all 0.5s ease;
                     let result = await res.json();
 
                     if (res.status == 200) {
-                        show("Massage Sent Successfully ✅", "#705835");
+                        show("✅Massage Sent Successfully", "#705835");
                         form.reset();
                     } else {
                         console.log(result);
-                        show("Error ❌: " + result.message, "red");
+                        show("❌ Error: " + result.message, "red");
                     }
 
                 } catch (err) {
